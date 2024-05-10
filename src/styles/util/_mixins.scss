@@ -4,3 +4,17 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin position(
+  $position: absolute,
+  $top: 0px,
+  $left: 0px,
+  $right: 0px,
+  $bottom: 0px
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}

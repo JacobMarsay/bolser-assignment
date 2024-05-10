@@ -1,0 +1,13 @@
+@import "./../util/mixins";
+.hero {
+  @include position(fixed, 0, 0);
+  @include flex(row, center, center);
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/assets/images/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
