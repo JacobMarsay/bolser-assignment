@@ -1,0 +1,13 @@
+@import "./../util/mixins";
+.topbar__wrapper {
+  background: transparent;
+  .topbar__content {
+    @include flex(row, center, space-between);
+    .icon__wrapper.left {
+      margin-right: auto;
+    }
+    .icon__wrapper.right {
+      margin-left: auto;
+    }
+  }
+}
