@@ -5,7 +5,7 @@ interface HomepageProps {
 }
 
 const Homepage: React.FC<HomepageProps> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="page__wrapper">{children}</div>;
 };
 
 export default Homepage;
