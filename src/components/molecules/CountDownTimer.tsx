@@ -1,5 +1,5 @@
 import Countdown from "react-countdown-now";
-
+import React from "react";
 type RendererProps = {
   days: number;
   hours: number;

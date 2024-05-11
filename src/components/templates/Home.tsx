@@ -1,12 +1,16 @@
 import Divider from "../atoms/Divider";
+import React from "react";
 import Cards from "../molecules/Cards";
 import FormSection from "../molecules/FormSection";
 import Hero from "../molecules/Hero";
 import Homepage from "../organisms/HomePage";
-import Overlay from "../organisms/Overlay";
 import PageContent from "../organisms/PageContent";
 import TopBar from "../organisms/TopBar";
 const Home = () => {
+  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+
+  console.log(apiKey);
+
   return (
     <Homepage>
       <TopBar />

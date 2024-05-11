@@ -1,4 +1,5 @@
 import AgeCalculatorForm from "./forms/AgeCalculatorForm";
+import React from "react";
 
 interface Props {
   heading: string;
