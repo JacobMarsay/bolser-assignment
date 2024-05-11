@@ -6,6 +6,7 @@ import Hero from "../molecules/Hero";
 import Homepage from "../organisms/HomePage";
 import PageContent from "../organisms/PageContent";
 import TopBar from "../organisms/TopBar";
+import CityWeatherSection from "../molecules/CityWeatherSection";
 const Home = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -19,6 +20,7 @@ const Home = () => {
       <PageContent>
         <FormSection heading="How many months of summer have you lived through?" />
         <Divider />
+        <CityWeatherSection />
       </PageContent>
     </Homepage>
   );
