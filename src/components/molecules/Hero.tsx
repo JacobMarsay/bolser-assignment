@@ -1,10 +1,11 @@
 import Overlay from "../organisms/Overlay";
+import CountdownTimer from "./CountDownTimer";
 
 const Hero = () => {
   return (
     <div className="hero">
       <Overlay>
-        <h1>This is a main Heading</h1>
+        <CountdownTimer />
       </Overlay>
     </div>
   );
