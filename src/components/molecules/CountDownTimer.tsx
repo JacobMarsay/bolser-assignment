@@ -25,12 +25,9 @@ const CountdownTimer = () => {
 
   // Determine if today's date is before or after the start date
   const isBeforeStartDate = now < startDate;
-  console.log(isBeforeStartDate);
+
   // Calculate the appropriate countdown start date and end date
   const countdownEndDate = isBeforeStartDate ? startDate : endDate;
-
-  console.log(countdownEndDate);
-
   // Renderer function for the countdown
   const renderer = ({ days, hours, completed }: RendererProps) => {
     if (completed) {
