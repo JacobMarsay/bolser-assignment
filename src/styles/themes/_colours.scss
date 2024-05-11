@@ -5,8 +5,8 @@ $text-color: #ffffff;
 // Gradient overlay color with opacity
 $gradient-overlay: linear-gradient(
   to bottom,
-  rgba(255, 234, 0, 0.5),
-  rgba(255, 113, 66, 0.5)
+  rgba(255, 234, 0, 0.5) 5%,
+  rgba(255, 113, 66, 0.5) 90%
 );
 
 // Opacity variations
