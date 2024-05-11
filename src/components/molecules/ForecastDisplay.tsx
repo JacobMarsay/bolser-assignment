@@ -6,7 +6,6 @@ interface ForecastDisplayProps {
 }
 
 const ForecastDisplay: React.FC<ForecastDisplayProps> = ({ data }) => {
-  console.log(data);
   return (
     <div className="forecast__results">
       <div className="weather__info__wrapper">

@@ -2,7 +2,8 @@
 
 .cards__wrapper {
   position: relative;
-
+  z-index: 101;
+  @include flex(row, center, center);
   .cards {
     @include position(absolute);
     @include flex(row, center, center);
