@@ -1,0 +1,14 @@
+// Color variables
+$primary-color: #cbbebe;
+$secondary-color: #f0f1dd;
+$text-color: #ffffff;
+// Gradient overlay color with opacity
+$gradient-overlay: linear-gradient(
+  to bottom,
+  rgba(255, 234, 0, 0.5),
+  rgba(255, 113, 66, 0.5)
+);
+
+// Opacity variations
+$primary-color-opacity-55: rgba(203, 190, 190, 0.55);
+$secondary-color-opacity-55: rgba(240, 241, 221, 0.55);

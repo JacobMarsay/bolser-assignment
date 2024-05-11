@@ -1,0 +1,7 @@
+.overlay {
+  @include position(fixed, 0, 0);
+  @include flex(row, center, center);
+  width: 100vw;
+  height: 100vh;
+  background: $gradient-overlay;
+}

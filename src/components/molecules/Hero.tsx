@@ -1,7 +1,11 @@
+import Overlay from "../organisms/Overlay";
+
 const Hero = () => {
   return (
     <div className="hero">
-      <h1>This is a main Heading</h1>
+      <Overlay>
+        <h1>This is a main Heading</h1>
+      </Overlay>
     </div>
   );
 };
