@@ -1,4 +1,5 @@
 import Cards from "../molecules/Cards";
+import FormSection from "../molecules/FormSection";
 import Hero from "../molecules/Hero";
 import Homepage from "../organisms/HomePage";
 import Overlay from "../organisms/Overlay";
@@ -11,7 +12,7 @@ const Home = () => {
       <Hero />
       <Cards />
       <PageContent>
-        <h2>Card Wrapper goes here</h2>
+        <FormSection heading="How many months of summer have you lived through?" />
       </PageContent>
     </Homepage>
   );
