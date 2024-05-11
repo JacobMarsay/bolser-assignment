@@ -1,0 +1,19 @@
+input {
+  height: 40px;
+  width: 230px;
+  padding: 0px 10px;
+  background-color: transparent;
+  border: solid transparent; // Set default border to transparent
+  outline: none; // Remove default focus outline
+  // Default border color
+  border-color: white;
+  color: rgb(255, 255, 255);
+
+  &:focus,
+  &:focus-visible {
+    border-color: white; // Change border color when focused
+  }
+  &::placeholder {
+    color: rgb(202, 202, 202);
+  }
+}

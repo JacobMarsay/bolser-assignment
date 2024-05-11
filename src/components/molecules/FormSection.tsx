@@ -9,8 +9,8 @@ const FormSection = ({ heading }: Props) => {
     <div className="form__section">
       <div className="form__heading">
         <h2>{heading}</h2>
-        <AgeCalculatorForm />
       </div>
+      <AgeCalculatorForm />
     </div>
   );
 };

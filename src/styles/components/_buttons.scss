@@ -1,0 +1,13 @@
+button {
+  width: 120px;
+  height: 44px;
+  border: solid white;
+  background-color: $primary-color-opacity-55;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}

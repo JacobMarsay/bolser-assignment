@@ -2,6 +2,13 @@
 
 h1,
 h2,
-h3 {
+h3,
+button,
+input {
   font-family: "Nothing You Could Do", sans-serif;
+}
+
+input,
+button {
+  font-weight: bold;
 }

@@ -46,18 +46,25 @@ const AgeCalculatorForm = () => {
             type="text"
             value={ageInput}
             onChange={handleChange}
-            placeholder="Enter your age"
+            placeholder="Your age"
           />
         )}
         {!showResult && (
           <button type="submit" disabled={disabled}>
-            Submit
+            Calculate
           </button>
         )}
         {showResult && (
           <div>
-            <p>You have lived {monthsOfSummer} months of summer!</p>
-            <button type="button" onClick={handleReset}>
+            <h3>
+              You have lived {monthsOfSummer} <br />
+              months of summer!
+            </h3>
+            <button
+              type="button"
+              onClick={handleReset}
+              className={disabled ? "disabled" : ""}
+            >
               Reset
             </button>
           </div>
