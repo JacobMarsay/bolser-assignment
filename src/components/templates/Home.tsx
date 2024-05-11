@@ -8,10 +8,6 @@ import PageContent from "../organisms/PageContent";
 import TopBar from "../organisms/TopBar";
 import CityWeatherSection from "../molecules/CityWeatherSection";
 const Home = () => {
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-
-  console.log(apiKey);
-
   return (
     <Homepage>
       <TopBar />

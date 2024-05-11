@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { WeatherData } from "../types";
 
-interface WeatherHookResponse {
+export interface WeatherHookResponse {
   weatherData: WeatherData | null;
   loading: boolean;
   error: string | null;

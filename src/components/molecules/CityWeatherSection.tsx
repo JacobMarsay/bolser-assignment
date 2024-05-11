@@ -1,9 +1,16 @@
 // components/CityWeatherSection.tsx
-import React from "react";
+import React, { useState } from "react";
 import useWeatherData from "../../hooks/useWeatherData";
+import ForeCastTrigger from "./ForecastTrigger";
+import ForecastDisplay from "./ForecastDisplay";
 
 const CityWeatherSection = () => {
+  const [hasClicked, setHasClicked] = useState(false);
   const { weatherData, loading, error } = useWeatherData("Leeds");
+
+  const toggleWeatherHandler = () => {
+    setHasClicked((prevClicked) => !prevClicked);
+  };
 
   if (loading) {
     return <p>Loading weather data...</p>;
@@ -17,14 +24,19 @@ const CityWeatherSection = () => {
     return <p>No weather data available.</p>;
   }
 
-  const { location: weatherLocation, current } = weatherData;
+  const { current } = weatherData;
 
   return (
-    <div>
-      <h2>Current Weather in {weatherLocation.name}</h2>
-      <p>Temperature: {current.temp_c}°C</p>
-      <p>Condition: {current.condition.text}</p>
-    </div>
+    <section>
+      <div className="forecast__wrapper">
+        <ForeCastTrigger toggle={toggleWeatherHandler} />
+        {hasClicked && (
+          <>
+            <ForecastDisplay data={current} />
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 

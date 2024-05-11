@@ -1,0 +1,51 @@
+@import "./../util/mixins";
+
+.forecast {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 70px;
+  .header {
+    text-align: start;
+    width: 50%;
+    padding-left: 20px;
+  }
+  .showme__btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+  }
+}
+
+.forecast__results {
+  padding-top: 50px;
+  padding-left: 30px;
+  width: 100%;
+  .weather__info__wrapper {
+    @include flex(row, center);
+    width: 75%;
+    .current__weather {
+      @include flex(column, start);
+    }
+    .icon {
+      width: 15%;
+    }
+    .weather__stats {
+      width: 60%;
+    }
+    .info__box {
+      @include flex(row, center, space-between);
+      margin-bottom: 10px;
+
+      padding: 10px;
+    }
+    .primary {
+      background-color: $primary-color-opacity-55;
+    }
+    .secondary {
+      background-color: $secondary-color-opacity-55;
+    }
+  }
+}
