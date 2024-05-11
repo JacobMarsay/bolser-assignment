@@ -1,6 +1,6 @@
 @import "./../util/mixins";
 .topbar__wrapper {
-  @include position(sticky);
+  @include position(absolute);
   background: transparent;
   z-index: 100;
   .topbar__content {

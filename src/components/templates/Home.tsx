@@ -9,9 +9,7 @@ const Home = () => {
       <TopBar />
       <Hero />
       <PageContent>
-        <Overlay>
-          <h2>test</h2>
-        </Overlay>
+        <h2>Card Wrapper goes here</h2>
       </PageContent>
     </Homepage>
   );

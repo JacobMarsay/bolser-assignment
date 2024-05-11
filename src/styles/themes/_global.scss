@@ -11,10 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+body {
+  overflow-x: hidden;
+}
 
 .page__wrapper {
   position: relative;
-  .page__content {
+  .page__content__wrapper {
     position: relative;
+    .page__body {
+      margin: 0pc 20px;
+    }
   }
 }
