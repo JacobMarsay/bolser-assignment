@@ -1,23 +1,34 @@
-# Getting Started with Create React App
+# Getting Started with the Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Download Node_modules with:
 
-## Available Scripts
+### `npm install`
 
-In the project directory, you can run:
+This project is currently using verison `10.7.0`
+
+## API setup
+
+At the root of the project add a `.env` file.
+Inside this file add an enviroment variable and namme it `REACT_APP_WEATHER_API_KEY`.
+
+Next you will need to set up an account with [weatherapi](https://www.weatherapi.com/signup.aspx) to acquire a key.
+
+When you have a key place this in you enviroment variable. `REACT_APP_WEATHER_API_KEY=YOUR_API_KEY` for example.
+
+## Running The Project
+
+### Development Build
+
+In the project directory, you can run for development mode:
 
 ### `npm start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Production Build
 
 ### `npm run build`
 
@@ -25,22 +36,31 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Important Information Based On Project Requirements
 
-### `npm run eject`
+### Days of Summer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The first feature asked to display the days of summer as in remainding days of summer left. Given that we aren't curently in summer I have further implmented this feature to display the days until summer. When it is the offical day of summer i.e 20th June the count displays the days of summer remaining.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In addition to this feature I have also made the years dynamic rather than just recording just the current year.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To test this please read my comment in [<CountdownTimer/>](src/components/molecules/CountDownTimer.tsx) on line `17-22`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Future Development
 
-## Learn More
+To account for leap years as the date of summer is usually on 21th June and 20th of June on leap years.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Displaying Weather Results
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I couldn't get the rain mesurements as shown in the designs `Rain: 2mm` as this wasn't a property in the response body. Instead I have replaced this with `wind degree`.
+
+## Technologies
+
+### `React - 18.3.1`
+
+### `Typescript - 5.4.5`
+
+### `Sass`
+
+### `Node - 22.0.0`
