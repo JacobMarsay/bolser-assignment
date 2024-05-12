@@ -37,13 +37,7 @@ export const Facebook: React.FC<SVGProps<SVGSVGElement>> = (props) => (
     <title>F_icon</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g
-      id="Page-1"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-    >
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g
         id="Home"
         transform="translate(-1340.000000, -20.000000)"
