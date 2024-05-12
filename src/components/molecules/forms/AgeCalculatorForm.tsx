@@ -1,4 +1,8 @@
+// AgeCalculatorForm.tsx
+
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeInFromLeft } from "../../../animations/animations";
 
 const AgeCalculatorForm = () => {
   const [ageInput, setAgeInput] = useState("");
@@ -8,21 +12,14 @@ const AgeCalculatorForm = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     let input = event.target.value;
-
-    // Filter out non-numeric characters using regular expression
     input = input.replace(/[^0-9]/g, ""); // Only allow digits
-
     setAgeInput(input);
-
-    // Validate if the input is a valid number
     const isValidNumber = input.trim() !== "";
     setDisabled(!isValidNumber);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // Calculate months of summer (age * 3)
     const age = parseInt(ageInput);
     if (!isNaN(age)) {
       const months = age * 3;
@@ -42,24 +39,31 @@ const AgeCalculatorForm = () => {
     <div className="form__wrapper">
       <form className="form" onSubmit={handleSubmit}>
         {!showResult && (
-          <input
-            type="text"
-            value={ageInput}
-            onChange={handleChange}
-            placeholder="Your age"
-          />
+          <motion.div
+            variants={fadeInFromLeft} // Use type assertion
+            initial="hidden"
+            animate="show"
+          >
+            <input
+              type="text"
+              value={ageInput}
+              onChange={handleChange}
+              placeholder="Your age"
+            />
+            <button type="submit" disabled={disabled}>
+              Calculate
+            </button>
+          </motion.div>
         )}
-        {!showResult && (
-          <button type="submit" disabled={disabled}>
-            Calculate
-          </button>
-        )}
+
         {showResult && (
-          <div>
-            <h3>
-              You have lived {monthsOfSummer} <br />
-              months of summer!
-            </h3>
+          <motion.div
+            variants={fadeInFromLeft} // Use type assertion
+            initial="hidden"
+            animate="show"
+            className="result"
+          >
+            <h3>You have lived {monthsOfSummer} months of summer!</h3>
             <button
               type="button"
               onClick={handleReset}
@@ -67,7 +71,7 @@ const AgeCalculatorForm = () => {
             >
               Reset
             </button>
-          </div>
+          </motion.div>
         )}
       </form>
     </div>

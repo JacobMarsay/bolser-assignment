@@ -6,10 +6,10 @@ const TopBar = () => {
       <div className="topbar__wrapper">
         <div className="topbar__content">
           <div className="icon__wrapper left">
-            <Icon name="logo" />
+            <Icon className="logo" name="logo" />
           </div>
           <div className="icon__wrapper right">
-            <Icon name="facebook" />
+            <Icon className="social" name="facebook" />
           </div>
         </div>
       </div>

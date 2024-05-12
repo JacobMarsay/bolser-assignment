@@ -14,3 +14,31 @@ export const staggeredFadeUp: Variants = {
     },
   },
 };
+
+export const fadeInFromLeft: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -100, // Initial x position (offscreen to the left)
+  },
+  show: {
+    opacity: 1,
+    x: 0, // Final x position (on screen)
+    transition: {
+      duration: 1, // Total duration for the animation
+    },
+  },
+};
+
+export const fadeDown: Variants = {
+  hidden: {
+    opacity: 0,
+    y: -100, // Initial y position (offscreen above)
+  },
+  show: {
+    opacity: 1,
+    y: 0, // Final y position (on screen)
+    transition: {
+      duration: 1, // Total duration for the animation
+    },
+  },
+};
