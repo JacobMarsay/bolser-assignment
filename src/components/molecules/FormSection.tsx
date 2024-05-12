@@ -7,12 +7,14 @@ interface Props {
 
 const FormSection = ({ heading }: Props) => {
   return (
-    <div className="form__section">
-      <div className="form__heading">
-        <h2>{heading}</h2>
+    <section>
+      <div className="form__section">
+        <div className="form__heading">
+          <h2>{heading}</h2>
+        </div>
+        <AgeCalculatorForm />
       </div>
-      <AgeCalculatorForm />
-    </div>
+    </section>
   );
 };
 

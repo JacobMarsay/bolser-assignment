@@ -4,13 +4,15 @@ import CountdownTimer from "./CountDownTimer";
 
 const Hero = () => {
   return (
-    <div className="hero__wrapper">
-      <div className="hero">
-        <Overlay>
-          <CountdownTimer />
-        </Overlay>
+    <section>
+      <div className="hero__wrapper">
+        <div className="hero">
+          <Overlay>
+            <CountdownTimer />
+          </Overlay>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
