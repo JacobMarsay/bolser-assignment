@@ -17,3 +17,9 @@ input {
     color: rgb(224, 224, 224);
   }
 }
+
+@media (max-width: 460px) {
+  input {
+    width: 250px;
+  }
+}

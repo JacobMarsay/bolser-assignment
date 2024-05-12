@@ -19,3 +19,18 @@
     }
   }
 }
+
+@media (max-width: 460px) {
+  .form {
+    div {
+      @include flex(column, center, center);
+      width: 100%;
+      input {
+        margin: 0px;
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}

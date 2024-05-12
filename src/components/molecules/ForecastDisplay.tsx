@@ -19,13 +19,16 @@ const ForecastDisplay: React.FC<ForecastDisplayProps> = ({ data }) => {
         className="forecast__results"
       >
         <div className="weather__info__wrapper">
-          <div className="current__weather">
-            <span>Currently:</span>
-            <span>{data?.condition?.text}</span>
+          <div className="current__weather__wrapper">
+            <div className="current__weather">
+              <span>Currently:</span>
+              <span>{data?.condition?.text}</span>
+            </div>
+            <div className="icon">
+              <img src={data?.condition?.icon} alt={data?.condition?.text} />
+            </div>
           </div>
-          <div className="icon">
-            <img src={data?.condition?.icon} alt={data?.condition?.text} />
-          </div>
+
           <div className="weather__stats">
             <div className="info__box primary">
               <span>Temp: {data.temp_c}°C</span>

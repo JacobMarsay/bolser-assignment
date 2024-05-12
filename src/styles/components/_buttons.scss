@@ -11,3 +11,9 @@ button {
     cursor: not-allowed;
   }
 }
+
+@media (max-width: 460px) {
+  button {
+    width: 100%;
+  }
+}

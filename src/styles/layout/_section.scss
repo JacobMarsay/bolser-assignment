@@ -1,21 +1,17 @@
 @import "./../util/mixins";
 
 .forecast {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(row, center, center);
   margin: 0px 70px;
   .header {
     text-align: start;
-    width: 50%;
-    padding-left: 20px;
+    padding: 0px 40px;
   }
   .showme__btn {
     display: flex;
     align-items: center;
     justify-content: start;
-    width: 50%;
+    margin-right: 85px;
   }
 }
 
@@ -29,11 +25,14 @@
   .weather__info__wrapper {
     @include flex(row, center);
     width: 75%;
-    .current__weather {
-      @include flex(column, start);
-    }
-    .icon {
-      width: 15%;
+    .current__weather__wrapper {
+      padding: 0px 20px;
+      .current__weather {
+        @include flex(column, start);
+      }
+      .icon {
+        width: 15%;
+      }
     }
     .weather__stats {
       width: 60%;
@@ -49,6 +48,45 @@
     }
     .secondary {
       background-color: $secondary-color-opacity-55;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .forecast {
+    @include flex(column, start, center);
+    .header {
+      width: 100%;
+      text-align: center;
+      padding: 0px;
+    }
+    .showme__btn {
+      width: 100%;
+      button {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .forecast__results {
+    .weather__info__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .current__weather__wrapper {
+        @include flex(row, center, center);
+      }
+      .weather__stats {
+        .info__box {
+          @include flex(row);
+          width: 100%;
+          span {
+            padding: 10px;
+          }
+        }
+      }
     }
   }
 }
