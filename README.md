@@ -47,13 +47,45 @@ In addition to this feature I have also made the years dynamic rather than just 
 
 To test this please read my comment in `<CountdownTimer/>` on line `17-22`.
 
-### Future Development
+The logic takes 4 dates.
 
-To account for leap years as the date of summer is usually on 21th June and 20th of June on leap years.
+- `Year date` to get `current year` (This is so we can get the next years after this).
+- `Now date` to get todays date.
+- `Start date` to get the first day of summer.
+- `End date` to get the last day of summer.
+
+I have used `current year` and placed it within the `start` and `end` dates to dynamically capture future years
+
+To get the days and hours until summer I have declared a variable (`isBeforeStartDate`) which checks if the now date is before the start date in which if it is, is set to true.
+Then I have declared another variable called `countdownEndDate` and used `isBeforeStartDate` to conditionally display the start date or end date.
+
+### Number of summer months lived
+
+This functionality is done by taking in the users age and multiplying their age by 3.
+
+I have added a reset button to clear the text and input
+
+Also disabled the calculate button so that users can't submit empty fields.
+
+Lastly, restricted the users from enetering alphbetical / special characters.
 
 ### Displaying Weather Results
 
 I couldn't get the rain mesurements as shown in the designs `Rain: 2mm` as this wasn't a property in the response body. Instead I have replaced this with `wind degree`.
+
+To get the data I am using axios inside a custom hook called `useWeatherData`.
+
+Inside the hook I am using state to capture the weather data, and also using state to capture any errors and loading state.
+
+Inside this hook I have named a function called `fetchWeatherData` wrapped in a useEffect.
+
+This function is done with a try and catch in which we are constructing the URL based on a valid key and passing a location as a parameter and the we are returning the response and capturing it in the weatherData state. If the request fails we then catch the errors and store them within the error state.
+
+Please note, I have added in location as a parameter to make this more dynamic. I.e, if we wanted a select with different cities then we can pass these to this hook to get other specific cities.
+
+### Future Development
+
+To account for non-leap years as the date of summer is usually on 21th June and 20th of June on leap years.
 
 ## Technologies
 
